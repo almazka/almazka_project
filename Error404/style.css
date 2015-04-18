@@ -1,0 +1,35 @@
+
+body {
+	min-height: 100%;
+	min-width: 100%;
+	background: #D9F3EF;
+}
+html, body {
+	margin: 0px;
+	padding: 0px;
+	border: 0;
+	font-family: Arial;
+	font-size: 12px;
+	color: #000;
+}
+body .wrapper {
+	width: 940px;
+	margin: 0 auto;
+	text-align: center;
+}
+body .wrapper .err {
+	background: url(img/error.png) 0 0 no-repeat;
+	width: 636px;
+	height: 606px;
+	margin: 100px auto;
+	position: relative;
+}
+.err p {
+	font-size: 35px;
+	font-family: 'Ubuntu';
+	position: absolute;
+	bottom: 0;
+	color: #111;
+	left: 66px;
+	margin-bottom: 0;
+}

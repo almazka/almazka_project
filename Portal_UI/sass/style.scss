@@ -1,0 +1,247 @@
+@import 'compass/reset';
+
+
+/******** Compass sprites starts ********/
+	@import "compass/utilities/sprites";
+
+$social-layout: normal;
+$sprite-spacing: 10px;
+@import "sprite/*.png";
+@include all-sprite-sprites; 
+
+/******** Compass sprites ends ********/
+
+
+/******** Apple text hack starts ********/
+	div, span, a, li, h1, h2, h3, h4, 
+	h5, h6, td, input, textarea, button {
+		-webkit-text-size-adjust: none;
+		-o-text-size-adjust: none;
+		-moz--text-size-adjust: none;
+		text-size-adjust: none;
+		max-height: 999999px;
+	}
+	input[type=text],
+	input[type=password],
+	input[type=submit],
+	textarea {
+		-webkit-appearance: none !important;
+	}
+/******** Apple text hack ends ********/
+
+
+/******** General styles starts ********/
+/* variables */
+$colorGray: #6D6E71;
+$ligthGray: #eceef4;
+$grayBrdr: #DEE0E6;
+$gray3: #bcbec3;
+$gray4: #d4d4d5;
+$hoverBlue: #3bb0e4;
+
+
+body {
+	color: $colorGray;
+	min-width: 950px;
+	min-height: 100%;
+	font-family: 'Open Sans', sans-serif;
+}
+.wrap {
+	width: 1160px;
+	margin: 0 auto;
+}
+.top {
+	background: $ligthGray;
+}
+.top-menu {
+	float: left;
+	margin: 16px 0;
+	padding: 0;
+}
+.menu {
+	overflow: hidden;
+}
+.top-menu a {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #FFF;
+	width: 99px;
+	height: 32px;
+	border-radius: 4px;
+	line-height: 32px;
+	color: $colorGray;
+	&::before {
+		content: "";
+		display: block;
+		float: left;
+		width: 19px;
+		height: 19px;
+		margin-top: 6px;
+		margin-left: 8px;
+	}
+	&:nth-of-type(1)::before {
+		margin: 7px 21px 0 8px;
+		@extend .sprite-blog; }
+	&:nth-of-type(2)::before {
+		height: 22px;
+		margin: 4px 19px 0 9px;
+		@extend .sprite-jobs; }
+	&:nth-of-type(3)::before {
+		margin: 8px 12px 0 9px;
+		@extend .sprite-support; }
+	&:nth-of-type(4)::before {
+		margin: 7px 17px 0 10px;
+		@extend .sprite-arabic; }
+}
+.social {
+	float: right;
+	div {
+		float: left;
+		border-left: 1px solid $grayBrdr;
+		&:last-of-type {
+			border-right: 1px solid #DEE0E6;
+		}
+		a {
+			display: block;
+			height: 21px;
+			width: 25px;
+			margin: 21px 19px;
+		}
+		&:nth-of-type(1) a {
+			@extend .sprite-fb;
+		}
+		&:nth-of-type(2) a {
+			@extend .sprite-twitter;
+		}
+		&:nth-of-type(3) a {
+			@extend .sprite-inst;
+		}
+		&:nth-of-type(4) a {
+			@extend .sprite-g;
+		}
+	}
+}
+.logo {
+	overflow: hidden;
+	padding: 56px 0;
+	border-bottom: 1px solid $ligthGray;
+	& div[class^="logo"]:nth-of-type(1) {
+		float: left;
+	}
+	& div[class^="logo"]:nth-of-type(2) {
+		float: right;
+	}
+	.logoContacts {
+		margin-right: 8px;
+		.modal {
+			margin-bottom: 20px;
+		}
+		div {
+			float: left;
+			position: relative;
+			width: 75px;
+			height: 33px;
+				i {
+				display: block;
+				cursor: pointer;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				}
+			&:nth-of-type(1) i {
+				@extend .sprite-phone;
+				width: 28px;
+				height: 29px;
+			}
+			&:nth-of-type(2)::after {
+				content: "";
+				display: block;
+				position: absolute;
+				height: 24px;
+				width: 1px;
+				background: #bcbec3;
+				left: 74px;
+				top: 5px;
+			}
+			&:nth-of-type(2)::before{
+				content: "";
+				position: absolute;
+				display: block;
+				height: 24px;
+				width: 1px;
+				background: $gray3;
+				top: 5px;
+				left: 4px;
+			}
+			&:nth-of-type(2) i {
+				@extend .sprite-place;
+				width: 25px;
+				height: 34px;
+			}
+			&:nth-of-type(3) i {
+				@extend .sprite-mail;
+				width: 30px;
+				height: 25px;
+			}
+		}
+		}
+	}
+.modal {
+	display: block;
+	position: relative;
+	display: block;
+	border: 2px solid $gray4;
+	border-radius: 5px;
+	color: $colorGray;
+	font-weight: normal;
+	margin-bottom: 12px;
+	text-align: center;
+	padding: 15px 23px;
+	i {
+		font-style: normal;
+		font-size: 16px;
+	}
+	b {
+		display: block;
+		position: absolute;
+		@extend .sprite-trangle;
+		width: 29px;
+		height: 14px;
+		bottom: -12px;
+	}
+}
+.top3 {
+	overflow: hidden;
+	.nav {
+		float: left;
+		li {
+			&:first-of-type {
+				padding-left: 15px;
+				border-left: none;
+			}
+			&:hover {
+				color: $hoverBlue;
+			}
+			&.active {
+				text-transform: uppercase;
+				color: $hoverBlue;
+			}
+			display: inline-block;
+			font-weight: bold;
+			font-size: 14px;
+			border-left: 1px solid $ligthGray;
+			padding: 0px 20px;
+			line-height: 88px;
+			cursor: pointer;
+		}
+	}
+	.search {
+		float: right;
+	}
+}
+/******** General styles ends ********/

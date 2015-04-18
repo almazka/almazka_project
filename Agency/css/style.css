@@ -1,0 +1,166 @@
+html, body {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana;
+	font-size: 13px;
+	color:#353535;
+}
+
+img {border:0;}
+
+a img {
+	border-width: 0px;
+	border-style: none;
+}
+
+body {
+	min-height: 100%;
+	min-width: 950px;
+	display:block;
+}
+
+header, footer, nav, article, section {display: block; position: relative;}
+
+.wrap {
+	width: 1161px;
+	margin: 0 auto;
+}
+.top {
+	background: #eceef4;
+}
+.menu {
+	overflow: hidden;
+}
+.top-menu {
+	float: left;
+	margin: 16px 0;
+	padding: 0;
+}
+.top-menu a {
+	display: inline-block;
+	font-size: 12px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #FFF;
+	width: 99px;
+	height: 32px;
+	border-radius: 4px;
+	line-height: 32px;
+	color: #6D6E71;
+}
+.top-menu a::before {
+	content: "";
+	display: block;
+	float: left;
+	width: 19px;
+	height: 19px;
+	background: url("../img/social-sprite.png") no-repeat;
+} 
+.top-menu a:nth-of-type(2)::before {
+	content: "";
+	height: 22px;
+	margin: 6px 21px 0 8px;
+}
+.top-menu a:nth-of-type(1)::before {
+	content: "";
+	background-position: -19px -48px;
+	margin: 6px 23px 0 8px;
+}
+.top-menu a:nth-of-type(2)::before {
+	content: "";
+	background-position: 0px -46px;
+}
+.top-menu a:nth-of-type(3)::before {
+	content: "";
+	background-position: -60px -48px;
+	margin: 6px 10px 0 9px;
+}
+.top-menu a:nth-of-type(4)::before {
+	content: "";
+	background-position: -39px -48px;
+	margin: 6px 17px 0 8px;
+}
+.social {
+	float: right;
+}
+.social div {
+	float: left;
+	border-left: 1px solid #DEE0E6;
+}
+.social div:last-of-type {
+	border-right: 1px solid #DEE0E6;
+}
+.social div a {
+	display: block;
+	height: 21px;
+	background: url(../img/social-sprite.png);
+	margin: 21px 20px;
+}
+.social div:nth-of-type(1) a,
+.social div:nth-of-type(3) a {
+	width: 22px;
+}
+.social div:nth-of-type(2) a,
+.social div:nth-of-type(4) a {
+	width: 24px;
+}
+.social div:nth-of-type(1) a {
+	background-position: -24px -23px;
+}
+.social div:nth-of-type(2) a {
+	background-position: -48px -23px;
+}
+.social div:nth-of-type(3) a {
+	background-position: 26px -23px;
+}
+.social div:nth-of-type(4) a {
+	background-position: 0px -23px;
+}
+.logo-area {
+	padding: 56px 0;
+}
+.logo {
+	float: left;
+}
+.places {
+	float: right;
+}
+.places div {
+	float: left;
+	margin: 0 12px;
+}
+.places div i {
+	display: block;
+	background: url(../img/social-sprite.png);
+}
+.places div:nth-of-type(1) i {
+	width: 28px;
+	height: 29px;
+	background-position: 0px -120px;
+}
+.places div:nth-of-type(1) i:hover {
+	width: 28px;
+	height: 29px;
+	background-position: 0px 0px;
+}
+.places div:nth-of-type(2) i {
+	width: 25px;
+	height: 34px;
+	background-position: 0px 0px;
+}
+.places div:nth-of-type(2) i:hover {
+	width: 25px;
+	height: 34px;
+	background-position: 0px 0px;
+}
+.places div:nth-of-type(3) i {
+	width: 30px;
+	height: 25px;
+	background-position: 0px 0px;
+}
+.places div:nth-of-type(3) i:hover {
+	width: 30px;
+	height: 25px;
+	background-position: 0px 0px;
+}
