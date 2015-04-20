@@ -38,6 +38,8 @@ $grayBrdr: #DEE0E6;
 $gray3: #bcbec3;
 $gray4: #d4d4d5;
 $hoverBlue: #3bb0e4;
+$superBlue: #1faae2;
+$blue2: #bbedff;
 
 
 body {
@@ -230,18 +232,68 @@ body {
 			&.active {
 				text-transform: uppercase;
 				color: $hoverBlue;
+				position: relative;
+				&::after {
+					content: "";
+					display: block;
+					position: absolute;
+					left: 0px;
+					right: 0;
+					bottom: 0px;
+					width: 0px;
+					height: 0px;
+					margin: auto;
+					border-left: 21px solid transparent;
+					border-right: 21px solid transparent;
+					border-bottom: 10px solid $superBlue;
+				}
 			}
 			display: inline-block;
 			font-weight: bold;
 			font-size: 14px;
 			border-left: 1px solid $ligthGray;
 			padding: 0px 20px;
-			line-height: 88px;
+			line-height: 86px;
 			cursor: pointer;
 		}
 	}
 	.search {
 		float: right;
+		padding-top: 26px;
+		i {
+			@extend .sprite-loop;
+			display: inline-block;
+			width: 25px;
+			height: 25px;
+			margin-top: 4px;
+		}
+		input {
+			border: none;
+			padding: 8px;
+			margin: 0 15px 0 6px;
+			font-size: 15px;
+		}
+	}
+}
+.big_area {
+	background-image: url(../img/back.jpg);
+	height: 885px;
+	color: #FFF;
+	.toptext {
+		width: 780px;
+		height: 91px;
+		margin: 0 auto;
+		background: url(../img/and.png) no-repeat ;
+		b {
+			text-transform: uppercase;
+			font-size: 50px;
+			display: block;
+			font-weight: bold;
+		}
+		span {
+			font-size: 32px;
+			display: block;
+		}
 	}
 }
 /******** General styles ends ********/
