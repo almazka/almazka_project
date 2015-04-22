@@ -65,7 +65,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 
 /******** Compass sprites starts ********/
 /* line 320, sprite/*.png */
-.sprite-sprite, .sprite-arabic, .top-menu a:nth-of-type(4)::before, .sprite-arrow, .sprite-blog, .top-menu a:nth-of-type(1)::before, .sprite-boxLink, .sprite-boxMore, .sprite-fb, .social div:nth-of-type(1) a, .sprite-footerFacebook, .sprite-footerGoogle, .sprite-footerInstagram, .sprite-footerTwitter, .sprite-g, .social div:nth-of-type(4) a, .sprite-grayFacebook, .sprite-grayIn, .sprite-grayInstagram, .sprite-grayTwitter, .sprite-inst, .social div:nth-of-type(3) a, .sprite-jobs, .top-menu a:nth-of-type(2)::before, .sprite-loop, .top3 .search i, .sprite-mail, .logo .logoContacts div:nth-of-type(3) i, .sprite-maillist, .sprite-mapMail, .sprite-mapPhone, .sprite-mapPlace, .sprite-phone, .logo .logoContacts div:nth-of-type(1) i, .sprite-place, .logo .logoContacts div:nth-of-type(2) i, .sprite-search, .sprite-support, .top-menu a:nth-of-type(3)::before, .sprite-trangle, .modal b, .sprite-twitter, .social div:nth-of-type(2) a {
+.sprite-sprite, .sprite-arabic, .top-menu a:nth-of-type(4)::before, .sprite-arrow, .slider .next i, .sprite-blog, .top-menu a:nth-of-type(1)::before, .sprite-boxLink, .sprite-boxMore, .sprite-fb, .social a:nth-of-type(1) i, .sprite-footerFacebook, .sprite-footerGoogle, .sprite-footerInstagram, .sprite-footerTwitter, .sprite-g, .social a:nth-of-type(4) i, .sprite-grayFacebook, .sprite-grayIn, .sprite-grayInstagram, .sprite-grayTwitter, .sprite-inst, .social a:nth-of-type(3) i, .sprite-jobs, .top-menu a:nth-of-type(2)::before, .sprite-loop, .top3 .search i, .sprite-mail, .logo .logoContacts div:nth-of-type(3) i, .sprite-maillist, .sprite-mapMail, .sprite-mapPhone, .sprite-mapPlace, .sprite-phone, .logo .logoContacts div:nth-of-type(1) i, .sprite-place, .logo .logoContacts div:nth-of-type(2) i, .sprite-search, .sprite-support, .top-menu a:nth-of-type(3)::before, .sprite-trangle, .modal b, .sprite-twitter, .social a:nth-of-type(2) i {
   background-image: url('../img/sprite-s09b17d38e3.png');
   background-repeat: no-repeat;
 }
@@ -76,7 +76,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-arrow {
+.sprite-arrow, .slider .next i {
   background-position: 0 -29px;
 }
 
@@ -96,7 +96,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-fb, .social div:nth-of-type(1) a {
+.sprite-fb, .social a:nth-of-type(1) i {
   background-position: 0 -175px;
 }
 
@@ -121,7 +121,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-g, .social div:nth-of-type(4) a {
+.sprite-g, .social a:nth-of-type(4) i {
   background-position: 0 -330px;
 }
 
@@ -146,7 +146,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-inst, .social div:nth-of-type(3) a {
+.sprite-inst, .social a:nth-of-type(3) i {
   background-position: 0 -482px;
 }
 
@@ -235,7 +235,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
-.sprite-twitter, .social div:nth-of-type(2) a {
+.sprite-twitter, .social a:nth-of-type(2) i {
   background-position: 0 -1244px;
 }
 
@@ -262,7 +262,7 @@ textarea {
 /******** Apple text hack ends ********/
 /******** General styles starts ********/
 /* variables */
-/* line 45, ../sass/style.scss */
+/* line 46, ../sass/style.scss */
 body {
   color: #6D6E71;
   min-width: 950px;
@@ -270,30 +270,30 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
-/* line 51, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 .wrap {
   width: 1160px;
   margin: 0 auto;
 }
 
-/* line 55, ../sass/style.scss */
+/* line 56, ../sass/style.scss */
 .top {
   background: #eceef4;
 }
 
-/* line 58, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 .top-menu {
   float: left;
   margin: 16px 0;
   padding: 0;
 }
 
-/* line 63, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 .menu {
   overflow: hidden;
 }
 
-/* line 66, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 .top-menu a {
   display: inline-block;
   font-size: 12px;
@@ -306,7 +306,7 @@ body {
   line-height: 32px;
   color: #6D6E71;
 }
-/* line 77, ../sass/style.scss */
+/* line 78, ../sass/style.scss */
 .top-menu a::before {
   content: "";
   display: block;
@@ -316,75 +316,76 @@ body {
   margin-top: 6px;
   margin-left: 8px;
 }
-/* line 86, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .top-menu a:nth-of-type(1)::before {
   margin: 7px 21px 0 8px;
 }
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 .top-menu a:nth-of-type(2)::before {
   height: 22px;
   margin: 4px 19px 0 9px;
 }
-/* line 93, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 .top-menu a:nth-of-type(3)::before {
   margin: 8px 12px 0 9px;
 }
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 .top-menu a:nth-of-type(4)::before {
   margin: 7px 17px 0 10px;
 }
 
-/* line 100, ../sass/style.scss */
+/* line 101, ../sass/style.scss */
 .social {
   float: right;
 }
-/* line 102, ../sass/style.scss */
-.social div {
+/* line 103, ../sass/style.scss */
+.social a {
+  display: block;
   float: left;
   border-left: 1px solid #DEE0E6;
 }
-/* line 105, ../sass/style.scss */
-.social div:last-of-type {
+/* line 107, ../sass/style.scss */
+.social a:last-of-type {
   border-right: 1px solid #DEE0E6;
 }
-/* line 108, ../sass/style.scss */
-.social div a {
+/* line 110, ../sass/style.scss */
+.social a i {
   display: block;
   height: 21px;
   width: 25px;
   margin: 21px 19px;
 }
 
-/* line 128, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 .logo {
   overflow: hidden;
   padding: 56px 0;
   border-bottom: 1px solid #eceef4;
 }
-/* line 132, ../sass/style.scss */
+/* line 134, ../sass/style.scss */
 .logo div[class^="logo"]:nth-of-type(1) {
   float: left;
 }
-/* line 135, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .logo div[class^="logo"]:nth-of-type(2) {
   float: right;
 }
-/* line 138, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 .logo .logoContacts {
   margin-right: 8px;
 }
-/* line 140, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 .logo .logoContacts .modal {
   margin-bottom: 20px;
 }
-/* line 143, ../sass/style.scss */
+/* line 145, ../sass/style.scss */
 .logo .logoContacts div {
   float: left;
   position: relative;
   width: 75px;
   height: 33px;
 }
-/* line 148, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 .logo .logoContacts div i {
   display: block;
   cursor: pointer;
@@ -395,12 +396,12 @@ body {
   bottom: 0;
   margin: auto;
 }
-/* line 158, ../sass/style.scss */
+/* line 160, ../sass/style.scss */
 .logo .logoContacts div:nth-of-type(1) i {
   width: 28px;
   height: 29px;
 }
-/* line 163, ../sass/style.scss */
+/* line 165, ../sass/style.scss */
 .logo .logoContacts div:nth-of-type(2)::after {
   content: "";
   display: block;
@@ -411,7 +412,7 @@ body {
   left: 74px;
   top: 5px;
 }
-/* line 173, ../sass/style.scss */
+/* line 175, ../sass/style.scss */
 .logo .logoContacts div:nth-of-type(2)::before {
   content: "";
   position: absolute;
@@ -422,18 +423,18 @@ body {
   top: 5px;
   left: 4px;
 }
-/* line 183, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 .logo .logoContacts div:nth-of-type(2) i {
   width: 25px;
   height: 34px;
 }
-/* line 188, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .logo .logoContacts div:nth-of-type(3) i {
   width: 30px;
   height: 25px;
 }
 
-/* line 196, ../sass/style.scss */
+/* line 198, ../sass/style.scss */
 .modal {
   display: block;
   position: relative;
@@ -446,12 +447,12 @@ body {
   text-align: center;
   padding: 15px 23px;
 }
-/* line 207, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 .modal i {
   font-style: normal;
-  font-size: 16px;
+  font-size: 15px;
 }
-/* line 211, ../sass/style.scss */
+/* line 213, ../sass/style.scss */
 .modal b {
   display: block;
   position: absolute;
@@ -460,40 +461,40 @@ body {
   bottom: -12px;
 }
 
-/* line 220, ../sass/style.scss */
+/* line 222, ../sass/style.scss */
 .top3 {
   overflow: hidden;
 }
-/* line 222, ../sass/style.scss */
+/* line 224, ../sass/style.scss */
 .top3 .nav {
   float: left;
 }
-/* line 224, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 .top3 .nav li {
   display: inline-block;
   font-weight: bold;
-  font-size: 14px;
+  font-size: 13px;
   border-left: 1px solid #eceef4;
-  padding: 0px 20px;
+  padding: 0px 22px;
   line-height: 86px;
   cursor: pointer;
 }
-/* line 225, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 .top3 .nav li:first-of-type {
   padding-left: 15px;
   border-left: none;
 }
-/* line 229, ../sass/style.scss */
+/* line 231, ../sass/style.scss */
 .top3 .nav li:hover {
   color: #3bb0e4;
 }
-/* line 232, ../sass/style.scss */
+/* line 234, ../sass/style.scss */
 .top3 .nav li.active {
   text-transform: uppercase;
   color: #3bb0e4;
   position: relative;
 }
-/* line 236, ../sass/style.scss */
+/* line 238, ../sass/style.scss */
 .top3 .nav li.active::after {
   content: "";
   display: block;
@@ -508,19 +509,19 @@ body {
   border-right: 21px solid transparent;
   border-bottom: 10px solid #1faae2;
 }
-/* line 260, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 .top3 .search {
   float: right;
   padding-top: 26px;
 }
-/* line 263, ../sass/style.scss */
+/* line 265, ../sass/style.scss */
 .top3 .search i {
   display: inline-block;
   width: 25px;
   height: 25px;
   margin-top: 4px;
 }
-/* line 270, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 .top3 .search input {
   border: none;
   padding: 8px;
@@ -528,30 +529,67 @@ body {
   font-size: 15px;
 }
 
-/* line 278, ../sass/style.scss */
+/* line 280, ../sass/style.scss */
 .big_area {
-  background-image: url(../img/back.jpg);
+  background: url(../img/back.jpg) no-repeat center;
   height: 885px;
   color: #FFF;
 }
-/* line 282, ../sass/style.scss */
+/* line 284, ../sass/style.scss */
 .big_area .toptext {
   width: 780px;
-  height: 91px;
+  height: 110px;
   margin: 0 auto;
   background: url(../img/and.png) no-repeat;
+  background-position: 13px bottom;
+  padding-top: 255px;
 }
-/* line 287, ../sass/style.scss */
+/* line 291, ../sass/style.scss */
 .big_area .toptext b {
   text-transform: uppercase;
-  font-size: 50px;
+  font-size: 58px;
   display: block;
   font-weight: bold;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
-/* line 293, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 .big_area .toptext span {
-  font-size: 32px;
+  font-size: 45px;
   display: block;
+  font-weight: lighter;
+  padding: 10px 0 0 113px;
+}
+
+/* line 306, ../sass/style.scss */
+.slider {
+  overflow: hidden;
+  width: 755px;
+  float: right;
+  margin-top: 155px;
+}
+/* line 311, ../sass/style.scss */
+.slider .slide {
+  float: left;
+}
+/* line 314, ../sass/style.scss */
+.slider .next {
+  float: left;
+  position: relative;
+  height: 243px;
+  width: 111px;
+  background: #f4f4f4;
+  cursor: pointer;
+}
+/* line 321, ../sass/style.scss */
+.slider .next i {
+  position: absolute;
+  width: 23px;
+  height: 40px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
 }
 
 /******** General styles ends ********/
