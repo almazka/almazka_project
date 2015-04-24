@@ -31,16 +31,26 @@ $sprite-spacing: 10px;
 
 
 /******** General styles starts ********/
+/* Fonts */
+@import "http://webfonts.ru/import/osans.css";
+/*
+	Open Sans, 300, 300 italic, 400, 400 italic, 600, 600 italic, 700, 700 italic, 800, 800 italic
+*/
+
+
 /* variables */
 $colorGray: #6D6E71;
 $lightGray: #eceef4;
 $grayBrdr: #DEE0E6;
 $gray3: #bcbec3;
 $gray4: #d4d4d5;
+$gray5: #efefef;
+$grayCe: #cecece;
 $hoverBlue: #3bb0e4;
 $superBlue: #1faae2;
 $blue2: #bbedff;
 $lightGray2: #f4f4f4;
+$darkYellow: #cc9800;
 
 
 body {
@@ -48,6 +58,16 @@ body {
 	min-width: 950px;
 	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
+}
+h1 {
+	font-size: 44px;
+}
+h1, h2 {
+	font-weight: bold;
+}
+h2 {
+	color: $colorGray;
+	font-size: 26px;
 }
 .wrap {
 	width: 1160px;
@@ -310,6 +330,44 @@ body {
 	margin-top: 155px;
 	.slide {
 		float: left;
+		position: relative;
+		.art-top {
+			position: absolute;
+			height: 67px;
+			width: 100%;
+			bottom: 0;
+			text-align: center;
+			span {
+				position: absolute;
+				margin-top: 25px;
+				padding-left: 8px;
+				cursor: pointer;
+			}
+			& span::before {
+				content:"";
+				display: block;
+				position: absolute;
+				left: -35px;
+				top: -7px;
+				width: 32px;
+				height: 29px;
+			}
+			&.green {
+				background: rgba(134, 215, 107, 0.87);
+				span::before {
+					@extend .sprite-likegreen;
+				}
+			}
+			&.yellow {
+				background: rgba(236, 234, 113, 0.87);
+				span {
+					color: $darkYellow;
+				}
+				span::before {
+					@extend .sprite-likeyellow;
+				}
+			}
+		}
 	}
 	.next {
 		float: left;
@@ -331,4 +389,142 @@ body {
 		}
 	}
 }
+@mixin coloumn {
+	width: 386px;
+	padding-left: 138px;
+	p {
+		line-height: 24px;
+	}
+}
+.main-area {
+	.pre-description {
+		overflow: hidden;
+		padding-top: 30px;
+		padding-bottom: 110px;
+		background: url(../img/devide.jpg) no-repeat;
+		background-position: bottom center;
+		background-size: 100%;
+		.coloumn {
+			@include coloumn;
+			h2 {
+				margin: 18px 0;
+			}
+		}
+		.coloumn:first-of-type {
+			float: left;
+			background: url("../img/lamp.png") no-repeat;
+		}
+		.coloumn:last-of-type {
+			float: right;
+			background: url("../img/three.png") no-repeat;
+			background-position: 8px -2px;
+		}
+	}
+}
+.section-what {
+	div {
+		width: 432px;
+		margin: 0 auto;
+		margin-top: 67px;
+		min-height: 110px;
+		background: url(../img/arrows.png) no-repeat;
+		padding-left: 138px;
+		padding-top: 6px;
+		h1 {
+			margin: 18px 0 10px 0;
+			padding-left: 28px;
+		}
+		p {
+			padding-left: 28px;
+		}
+	}
+}
+.coloumns {
+	overflow: hidden;
+	margin-top: 93px;
+	.coloumn {
+		@include coloumn;
+		h2 {
+			font-size: 24px;
+			margin-bottom: 20px;
+		}
+	}
+	& .coloumn:first-of-type {
+		float: left;
+		padding-left: 117px;
+	}
+	& .coloumn:last-of-type {
+		float: right;
+		background-position-x: 42px !important;
+	}
+	& .coloumn.wdesign {
+		background: url(../img/setting.png) no-repeat;
+		min-height: 86px;
+	}
+	& .coloumn.mobile {
+		background: url(../img/phone.png) no-repeat;
+		min-height: 86px;
+	}
+	& .coloumn.software {
+		background: url(../img/cube.png) no-repeat;
+		min-height: 97px;
+	}
+	& .coloumn.design {
+		background: url(../img/sofa.png) no-repeat;
+		min-height: 69px;
+		background-position-x: 26px !important;
+	}
+	& .coloumn.branding {
+		background: url(../img/mouse.png) no-repeat;
+		min-height: 93px;
+	}
+	& .coloumn.seo {
+		background: url(../img/globus.png) no-repeat;
+		min-height: 81px;
+	}
+}
+.section-project {
+	background: url(../img/devidebottom.png) no-repeat;
+	width: 100%;
+	background-size: 100%;
+	background-position: top center;
+	background-color: $gray5;
+	margin-top: 90px;
+	padding-top: 61px;
+	div.title {
+		margin: 0 auto;
+		width: 363px;
+		min-height: 151px;
+		background: url(../img/colb.png) no-repeat;
+		padding-left: 136px;
+		h1 {
+			padding: 50px 0px 4px 34px;
+		}
+		p {
+			padding-left: 34px;
+			line-height: 26px;
+		}
+	}
+	.menu-project {
+		width: 751px;
+		margin: 0 auto;
+		margin-top: 84px;
+		a {
+			border: 2px solid $grayCe;
+			text-decoration: none;
+			font-weight: bold;
+			color: $grayCe;
+			border-radius: 3px;
+			padding: 10px 0;
+			text-align: center;
+			min-width: 101px;
+			display: inline-block;
+		}
+	}
+}
+
+
+
+
+
 /******** General styles ends ********/
