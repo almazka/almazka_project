@@ -39,22 +39,27 @@ $sprite-spacing: 10px;
 
 
 /* variables */
-$colorGray: #6D6E71;
-$lightGray: #eceef4;
-$grayBrdr: #DEE0E6;
-$gray3: #bcbec3;
-$gray4: #d4d4d5;
-$gray5: #efefef;
-$grayCe: #cecece;
+$colorGrey: #6D6E71;
+$lightGrey: #eceef4;
+$greyBrdr: #DEE0E6;
+$grey3: #bcbec3;
+$grey4: #d4d4d5;
+$grey5: #efefef;
+$greyCe: #cecece;
 $hoverBlue: #3bb0e4;
 $superBlue: #1faae2;
 $blue2: #bbedff;
-$lightGray2: #f4f4f4;
+$blue3: #1ea1d6;
+$lightGrey2: #f5f5f5;
 $darkYellow: #cc9800;
-
+$grey6: #d3d3d3;
+$darkGrey: #3c3e3f;
+$darkHoar: #2b2c2d;
+$hoar2: #393b3c;
+$hoar3: #494c4d;
 
 body {
-	color: $colorGray;
+	color: $colorGrey;
 	min-width: 950px;
 	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
@@ -66,15 +71,50 @@ h1, h2 {
 	font-weight: bold;
 }
 h2 {
-	color: $colorGray;
+	color: $colorGrey;
 	font-size: 26px;
 }
 .wrap {
 	width: 1160px;
 	margin: 0 auto;
 }
-.top {
-	background: $lightGray;
+.social {
+	a {
+		display: block;
+		float: left;
+		i {
+			display: block;
+			height: 21px;
+			width: 25px;
+			margin: 21px 19px;
+		}
+	}
+}
+.header {
+	.top {
+		background: $lightGrey;
+		.social {
+			float: right;
+			a {
+				border-left: 1px solid $greyBrdr;
+				&:last-of-type {
+					border-right: 1px solid $greyBrdr;
+				}
+				&:nth-of-type(1) i {
+					@extend .sprite-fb;
+				}
+				&:nth-of-type(2) i {
+					@extend .sprite-twitter;
+				}
+				&:nth-of-type(3) i {
+					@extend .sprite-inst;
+				}
+				&:nth-of-type(4) i {
+					@extend .sprite-g;
+				}
+			}
+		}
+	}
 }
 .top-menu {
 	float: left;
@@ -94,7 +134,7 @@ h2 {
 	height: 32px;
 	border-radius: 4px;
 	line-height: 32px;
-	color: $colorGray;
+	color: $colorGrey;
 	&::before {
 		content: "";
 		display: block;
@@ -118,50 +158,21 @@ h2 {
 		margin: 7px 17px 0 10px;
 		@extend .sprite-arabic; }
 }
-.social {
-	float: right;
-	a {
-		display: block;
-		float: left;
-		border-left: 1px solid $grayBrdr;
-		&:last-of-type {
-			border-right: 1px solid #DEE0E6;
-		}
-		i {
-			display: block;
-			height: 21px;
-			width: 25px;
-			margin: 21px 19px;
-		}
-		&:nth-of-type(1) i {
-			@extend .sprite-fb;
-		}
-		&:nth-of-type(2) i {
-			@extend .sprite-twitter;
-		}
-		&:nth-of-type(3) i {
-			@extend .sprite-inst;
-		}
-		&:nth-of-type(4) i {
-			@extend .sprite-g;
-		}
-	}
-}
 .logo {
 	overflow: hidden;
 	padding: 56px 0;
-	border-bottom: 1px solid $lightGray;
+	border-bottom: 1px solid $lightGrey;
 	& div[class^="logo"]:nth-of-type(1) {
 		float: left;
 	}
 	& div[class^="logo"]:nth-of-type(2) {
 		float: right;
 	}
+	.modal {
+		margin-bottom: 20px;
+	}
 	.logoContacts {
-		margin-right: 8px;
-		.modal {
-			margin-bottom: 20px;
-		}
+		margin: 70px 8px 0 0;
 		div {
 			float: left;
 			position: relative;
@@ -189,7 +200,7 @@ h2 {
 				height: 24px;
 				width: 1px;
 				background: #bcbec3;
-				left: 74px;
+				left: 72px;
 				top: 5px;
 			}
 			&:nth-of-type(2)::before{
@@ -198,9 +209,9 @@ h2 {
 				display: block;
 				height: 24px;
 				width: 1px;
-				background: $gray3;
+				background: $grey3;
 				top: 5px;
-				left: 4px;
+				left: 2px;
 			}
 			&:nth-of-type(2) i {
 				@extend .sprite-place;
@@ -216,16 +227,16 @@ h2 {
 		}
 	}
 .modal {
-	display: block;
+	display: inline-block;
 	position: relative;
-	display: block;
-	border: 2px solid $gray4;
+	border: 2px solid $grey4;
 	border-radius: 5px;
-	color: $colorGray;
+	color: $colorGrey;
 	font-weight: normal;
 	margin-bottom: 12px;
 	text-align: center;
 	padding: 15px 23px;
+	background: white;
 	i {
 		font-style: normal;
 		font-size: 15px;
@@ -273,7 +284,7 @@ h2 {
 			display: inline-block;
 			font-weight: bold;
 			font-size: 13px;
-			border-left: 1px solid $lightGray;
+			border-left: 1px solid $lightGrey;
 			padding: 0px 22px;
 			line-height: 86px;
 			cursor: pointer;
@@ -374,7 +385,7 @@ h2 {
 		position: relative;
 		height: 243px;
 		width: 111px;
-		background: $lightGray2;
+		background: $lightGrey2;
 		cursor: pointer;
 		i {
 			position: absolute;
@@ -488,9 +499,10 @@ h2 {
 	width: 100%;
 	background-size: 100%;
 	background-position: top center;
-	background-color: $gray5;
+	background-color: $grey5;
 	margin-top: 90px;
 	padding-top: 61px;
+	padding-bottom: 84px;
 	div.title {
 		margin: 0 auto;
 		width: 363px;
@@ -508,23 +520,359 @@ h2 {
 	.menu-project {
 		width: 751px;
 		margin: 0 auto;
-		margin-top: 84px;
+		margin-top: 79px;
 		a {
-			border: 2px solid $grayCe;
+			border: 2px solid $greyCe;
 			text-decoration: none;
 			font-weight: bold;
-			color: $grayCe;
+			color: $greyCe;
 			border-radius: 3px;
-			padding: 10px 0;
+			padding: 12px 0 13px 0;
 			text-align: center;
-			min-width: 101px;
 			display: inline-block;
+			margin-right: 11px;
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&:hover {
+				color: $colorGrey;
+				border-color: $colorGrey;
+			}
+			&.active {
+				border-color: white;
+				background: #fff;
+				color: $colorGrey;
+			}
+			}
+			.all {
+				width: 119px;
+			}
+			.mobileapps {
+				width: 152px;
+			}
+			.identities {
+				@extend .mobileapps;
+			}
+			.interiordesign {
+				@extend .mobileapps;
+			}
+			.uiux {
+				width: 95px;
+			}
+	}
+}
+.menu-list {
+	margin-top: 50px;
+	.item {
+		cursor: pointer;
+		display: inline-block;
+		width: 277px;
+		background: #FFF;
+		border-radius: 8px;
+		margin: 0px 0px 17px 12px;
+		&:nth-of-type(4n+1) {
+			margin-left: 0;
+		}
+		div {
+		position: relative;
+		background: $lightGrey2;
+		border-radius: 8px;
+		width: 252px;
+		height: 210px;
+		margin: 0 auto;
+		margin-top: 16px;
+		img {
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+		}
+		}
+		span {
+			display: block;
+			height: 58px;
+			position: relative;
+			a {
+				display: block;
+				float: left;
+				position: relative;
+				height: 100%;
+				width: 50%;
+			}
+			a::before {
+				content: "";
+				display: block;
+				position: absolute;
+				top: 0;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				margin: auto;
+			}
+			a:first-of-type::before {
+				@extend .sprite-link;
+				width: 23px;
+				height: 23px;
+			}
+			a:first-of-type::after {
+				content: "";
+				position: absolute;
+				border-right: 1px solid $grey5;
+				height: 100%;
+				right: 0;
+			}
+			a:last-of-type::before {
+				@extend .sprite-plus;
+				width: 24px;
+				height: 24px;
+			}
 		}
 	}
 }
-
-
-
-
+.section-team {
+	.title {
+		width: 607px;
+		padding-left: 162px;
+		background: url(../img/team.png) no-repeat;
+		min-height: 150px;
+		margin: 0 auto;
+		margin-top: 45px;
+		background-position-x: 143px;
+		h1 {
+			padding: 51px 0 5px 143px;
+		}
+		p {
+			line-height: 25px;
+			padding-left: 144px;
+		}
+	}
+}
+.faces {
+	margin-top: 80px;
+	li {
+		background: $lightGrey2;
+		width: 278px;
+		height: 395px;
+		display: inline-block;
+		margin-left: 11px;
+		border-radius: 4px;
+		text-align: center;
+		&:nth-of-type(4n+1) {
+			margin-left: 0;
+		}
+		img {
+			margin: 0px auto;
+			margin-top: 43px;
+			margin-bottom: 33px;
+			display: block;
+		}
+		h3 {
+			font-size: 24px;
+			font-weight: bold;
+		}
+		p {
+			line-height: 34px;
+		}
+		span {
+			display: block;
+			width: 100%;
+			background: #FFF;
+			padding: 20px 0;
+			margin-top: 35px;
+			a {
+			display: inline-block;
+			width: 23px;
+			height: 21px;
+			margin: 0 12px;
+			&:nth-of-type(1) {
+				@extend .sprite-greyFb;
+			}
+			&:nth-of-type(2) {
+				@extend .sprite-greyTw;
+			}
+			&:nth-of-type(3) {
+				@extend .sprite-greyInst;
+			}
+			&:nth-of-type(4) {
+				@extend .sprite-greyIn;
+			}
+			}
+		}
+	}
+}
+.section-map {
+	background: url(../img/map.jpg) no-repeat center;
+	background-size: cover;
+	height: 497px;
+	width: 100%;
+	margin-top: 100px;
+	position: relative;
+	.modal {
+		margin-bottom: 5px;
+		border-width: 1px;
+		z-index: 100;
+		b {
+			@extend .sprite-trangle1;
+			background-position: 0 -1323px;
+		}
+	}
+	.bigContacts {
+		position: absolute;
+		bottom: 69px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		width: 210px;
+		div {
+			background: white;
+			float: left;
+			position: relative;
+			cursor: pointer;
+			width: 60px;
+			height: 60px;
+			border: 1px solid $grey6;
+			border-radius: 8px;
+			margin: 0 6px;
+			&:hover {
+				background: $blue3;
+				border-color: $blue3;
+			}
+			&:first-of-type {
+				margin-left: 0;
+			}
+			&:nth-of-type(1):hover i {
+				@extend .sprite-mapPlace:hover;
+			}
+			&:nth-of-type(2):hover i {
+				@extend .sprite-mapMail:hover;
+			}
+			&:last-of-type {
+				margin-right: 0;
+			}
+			&:nth-of-type(3):hover i {
+				@extend .sprite-mapPhone:hover;
+			}
+				i {
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				}
+			&:nth-of-type(1) i {
+				@extend .sprite-mapPlace;
+				width: 36px;
+				height: 48px;
+			}
+			&:nth-of-type(2) i {
+				@extend .sprite-mapMail;
+				width: 42px;
+				height: 35px;
+			}
+			&:nth-of-type(3) i {
+				@extend .sprite-mapPhone;
+				width: 40px;
+				height: 40px;
+			}
+		}
+		}
+	}
+.footer {
+	background: $darkHoar;
+	padding-top: 79px;
+	.top {
+		overflow: hidden;
+	}
+	.social {
+		float: left;
+		a {
+			border-left: 1px solid $darkGrey;
+			&:last-of-type {
+				border-right: 1px solid $darkGrey;
+			}
+			&:nth-of-type(1) i {
+				@extend .sprite-darkFb;
+			}
+			&:nth-of-type(2) i {
+				@extend .sprite-darkTw;
+			}
+			&:nth-of-type(3) i {
+				@extend .sprite-darkInst;
+			}
+			&:nth-of-type(4) i {
+				@extend .sprite-darkGoo;
+			}
+		}
+	}
+	.send {
+		float: right;
+		min-height: 26px;
+		border-radius: 12px;
+		width: 574px;
+		background: $hoar2;
+		font-weight: bold;
+		font-size: 14px;
+		padding: 10px;
+		margin-top: 6px;
+		span {
+			position: relative;
+			padding: 16px 0 0 63px;
+			display: block;
+			margin-left: 11px;
+			float: left;
+		}
+		.button {
+			float: right;
+			display: block;
+			background: $hoar3;
+			border-radius: 12px;
+			padding: 16px 23px;
+			cursor: pointer;
+		}
+		span::before {
+			content: "";
+			position: absolute;
+			display: inline-block;
+			width: 32px;
+			height: 26px;
+			top: 11px;
+			left: 0;
+			@extend .sprite-maillist;
+		}
+	}
+}
+.bottom {
+	overflow: hidden;
+	padding: 32px 0;
+	font-size: 13px;
+	margin-top: 34px;
+	span {
+		display: block;
+		float: left;
+	}
+	ul {
+		float: right;
+		
+		li {
+			display: inline-block;
+			margin-right: 3px;
+			&::before {
+			content: '\25cf\a0';
+			font-size: 12px;
+			}
+			&:first-of-type::before {
+			content: '';
+			}
+			a {
+				text-decoration: none;
+				color: $colorGrey;
+			}
+		}
+	}
+}
 
 /******** General styles ends ********/
