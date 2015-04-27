@@ -1,0 +1,380 @@
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/******** Compass sprites starts ********/
+/* line 264, sprite/*.png */
+.sprite-sprite, .sprite-applications, .sprite-arroeMini, .sprite-arrowl, .sprite-arrowr, .sprite-dribble, .header .top .social a:nth-of-type(6), .sprite-fb, .header .top .social a:nth-of-type(2), .sprite-goo, .header .top .social a:nth-of-type(5), .sprite-grid, .sprite-link, .sprite-list, .sprite-photography, .sprite-pinterest, .header .top .social a:nth-of-type(4), .sprite-rss, .header .top .social a:nth-of-type(3), .sprite-seo, .sprite-twitter, .header .top .social a:nth-of-type(1), .sprite-websites {
+  background-image: url('../img/sprite-s64b09a2078.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-applications {
+  background-position: 0 0;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-applications:hover, .sprite-applications.applications-hover {
+  background-position: 0 -53px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arroeMini {
+  background-position: 0 -106px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrowl {
+  background-position: 0 -126px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrowl:hover, .sprite-arrowl.arrowl-hover {
+  background-position: 0 -167px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrowr {
+  background-position: 0 -208px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-arrowr:hover, .sprite-arrowr.arrowr-hover {
+  background-position: 0 -249px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-dribble, .header .top .social a:nth-of-type(6) {
+  background-position: 0 -290px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-dribble:hover, .header .top .social a:hover:nth-of-type(6), .sprite-dribble.dribble-hover, .header .top .social a.dribble-hover:nth-of-type(6) {
+  background-position: 0 -334px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-fb, .header .top .social a:nth-of-type(2) {
+  background-position: 0 -378px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-fb:hover, .header .top .social a:hover:nth-of-type(2), .sprite-fb.fb-hover, .header .top .social a.fb-hover:nth-of-type(2) {
+  background-position: 0 -422px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-goo, .header .top .social a:nth-of-type(5) {
+  background-position: 0 -466px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-goo:hover, .header .top .social a:hover:nth-of-type(5), .sprite-goo.goo-hover, .header .top .social a.goo-hover:nth-of-type(5) {
+  background-position: 0 -510px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-grid {
+  background-position: 0 -554px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-link {
+  background-position: 0 -579px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-list {
+  background-position: 0 -631px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-photography {
+  background-position: 0 -656px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-photography:hover, .sprite-photography.photography-hover {
+  background-position: 0 -708px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-pinterest, .header .top .social a:nth-of-type(4) {
+  background-position: 0 -760px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-pinterest:hover, .header .top .social a:hover:nth-of-type(4), .sprite-pinterest.pinterest-hover, .header .top .social a.pinterest-hover:nth-of-type(4) {
+  background-position: 0 -804px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-rss, .header .top .social a:nth-of-type(3) {
+  background-position: 0 -848px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-rss:hover, .header .top .social a:hover:nth-of-type(3), .sprite-rss.rss-hover, .header .top .social a.rss-hover:nth-of-type(3) {
+  background-position: 0 -892px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-seo {
+  background-position: 0 -936px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-seo:hover, .sprite-seo.seo-hover {
+  background-position: 0 -992px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-twitter, .header .top .social a:nth-of-type(1) {
+  background-position: 0 -1048px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-twitter:hover, .header .top .social a:hover:nth-of-type(1), .sprite-twitter.twitter-hover, .header .top .social a.twitter-hover:nth-of-type(1) {
+  background-position: 0 -1092px;
+}
+
+/* line 84, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-websites {
+  background-position: 0 -1136px;
+}
+/* line 59, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.3/stylesheets/compass/utilities/sprites/_base.scss */
+.sprite-websites:hover, .sprite-websites.websites-hover {
+  background-position: 0 -1204px;
+}
+
+/******** Compass sprites ends ********/
+/******** Apple text hack starts ********/
+/* line 16, ../sass/style.scss */
+div, span, a, li, h1, h2, h3, h4,
+h5, h6, td, input, textarea, button {
+  -webkit-text-size-adjust: none;
+  -o-text-size-adjust: none;
+  -moz--text-size-adjust: none;
+  text-size-adjust: none;
+  max-height: 999999px;
+}
+
+/* line 24, ../sass/style.scss */
+input[type=text],
+input[type=password],
+input[type=submit],
+textarea {
+  -webkit-appearance: none !important;
+}
+
+/******** Apple text hack ends ********/
+/******** General styles starts ********/
+/* fonts */
+@font-face {
+  font-family: Novecento, Arial;
+  src: url("../fonts/Novecento WideNormal.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: Novecento, Arial;
+  src: url("../fonts/Novecento WideLight.otf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: Novecento, Arial;
+  src: url("../fonts/Novecento WideBold.otf");
+  font-weight: bold;
+}
+/* variables */
+/* line 58, ../sass/style.scss */
+body {
+  font-family: "Novecento", Arial;
+  color: #8a8888;
+}
+
+/* line 62, ../sass/style.scss */
+h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 24px;
+}
+
+/* line 67, ../sass/style.scss */
+.wrap {
+  width: 940px;
+  margin: 0 auto;
+}
+
+/* line 72, ../sass/style.scss */
+.header .top {
+  overflow: hidden;
+  border-bottom: 1px solid #dadada;
+}
+/* line 75, ../sass/style.scss */
+.header .top .logo {
+  overflow: hidden;
+  float: left;
+  padding: 30px 0;
+}
+/* line 79, ../sass/style.scss */
+.header .top .logo img {
+  float: left;
+}
+/* line 82, ../sass/style.scss */
+.header .top .logo span {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 23px;
+  margin: 14px 0 0px 14px;
+  float: left;
+  color: #8a8888;
+}
+/* line 91, ../sass/style.scss */
+.header .top .social {
+  float: right;
+  margin-top: 46px;
+}
+/* line 94, ../sass/style.scss */
+.header .top .social a {
+  display: inline-block;
+  cursor: pointer;
+  height: 34px;
+  width: 34px;
+  margin-left: 3px;
+}
+/* line 121, ../sass/style.scss */
+.header .bottom {
+  padding: 28px 0;
+}
+/* line 124, ../sass/style.scss */
+.header .bottom .nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #737373;
+  font-weight: bold;
+  font-size: 17px;
+  margin-right: 27px;
+}
+/* line 131, ../sass/style.scss */
+.header .bottom .nav a:hover {
+  color: #2ecc71;
+}
+
+/* line 139, ../sass/style.scss */
+.slider {
+  position: relative;
+  background: url(../img/slider.png) no-repeat center;
+  min-height: 795px;
+  background-size: cover;
+}
+/* line 144, ../sass/style.scss */
+.slider p {
+  text-transform: uppercase;
+}
+/* line 147, ../sass/style.scss */
+.slider .description {
+  position: absolute;
+  bottom: 49px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  text-align: center;
+  width: 755px;
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 24px;
+}
+/* line 158, ../sass/style.scss */
+.slider .description .button {
+  margin-top: 24px;
+}
+
+/* line 163, ../sass/style.scss */
+.button {
+  text-transform: uppercase;
+  background: #2ecc71;
+  color: white;
+  font-weight: bold;
+  padding: 8px 12px;
+  display: inline-block;
+}
+
+/* line 172, ../sass/style.scss */
+.main-area .video-block {
+  background: #efefef;
+  padding-top: 36px;
+  overflow: hidden;
+  padding-bottom: 16px;
+}
+/* line 177, ../sass/style.scss */
+.main-area .video-block .video {
+  float: left;
+}
+/* line 180, ../sass/style.scss */
+.main-area .video-block .description {
+  float: right;
+  width: 530px;
+}
+/* line 183, ../sass/style.scss */
+.main-area .video-block .description h2 {
+  margin-bottom: 24px;
+}
+/* line 186, ../sass/style.scss */
+.main-area .video-block .description p {
+  font-size: 13px;
+  line-height: 21px;
+  margin-bottom: 25px;
+}
+
+/******** General styles ends ********/

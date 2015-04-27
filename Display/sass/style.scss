@@ -1,0 +1,195 @@
+@import 'compass/reset';
+
+
+/******** Compass sprites starts ********/
+	@import "compass/utilities/sprites";
+
+$social-layout: normal;
+$sprite-spacing: 10px;
+@import "sprite/*.png";
+@include all-sprite-sprites; 
+
+/******** Compass sprites ends ********/
+
+
+/******** Apple text hack starts ********/
+	div, span, a, li, h1, h2, h3, h4, 
+	h5, h6, td, input, textarea, button {
+		-webkit-text-size-adjust: none;
+		-o-text-size-adjust: none;
+		-moz--text-size-adjust: none;
+		text-size-adjust: none;
+		max-height: 999999px;
+	}
+	input[type=text],
+	input[type=password],
+	input[type=submit],
+	textarea {
+		-webkit-appearance: none !important;
+	}
+/******** Apple text hack ends ********/
+
+
+/******** General styles starts ********/
+/* fonts */
+@font-face {
+	font-family: Novecento, Arial;
+	src: url("../fonts/Novecento WideNormal.otf");
+	font-weight: normal;
+}
+@font-face {
+	font-family: Novecento, Arial;
+	src: url("../fonts/Novecento WideLight.otf");
+	font-weight: lighter;
+}
+@font-face {
+	font-family: Novecento, Arial;
+	src: url("../fonts/Novecento WideBold.otf");
+	font-weight: bold;
+}
+
+/* variables */
+$grey: #737373;
+$grey1: #8a8888;
+$grey2: #dadada;
+$grey3: #efefef;
+$lightGreen: #2ecc71;
+
+body {
+	font-family: "Novecento", Arial;
+	color: $grey1;
+}
+h2 {
+	text-transform: uppercase;
+	font-weight: bold;
+	font-size: 24px;
+}
+.wrap {
+	width: 940px;
+	margin: 0 auto;
+}
+.header {
+	.top {
+		overflow: hidden;
+		border-bottom: 1px solid $grey2;
+		.logo {
+			overflow: hidden;
+			float: left;
+			padding: 30px 0;
+			img {
+				float: left;
+			}
+			span {
+				text-transform: uppercase;
+				font-weight: bold;
+				font-size: 23px;
+				margin: 14px 0 0px 14px;
+				float: left;
+				color: $grey1;
+			}
+		}
+	.social {
+		float: right;
+		margin-top: 46px;
+		a {
+		display: inline-block;
+		cursor: pointer;
+		height: 34px;
+		width: 34px;
+		margin-left: 3px;
+		&:nth-of-type(1) {
+			@extend .sprite-twitter;
+		}
+		&:nth-of-type(2) {
+			@extend .sprite-fb;
+		}
+		&:nth-of-type(3) {
+			@extend .sprite-rss;
+		}
+		&:nth-of-type(4) {
+			@extend .sprite-pinterest;
+		}
+		&:nth-of-type(5) {
+			@extend .sprite-goo;
+		}
+		&:nth-of-type(6) {
+			@extend .sprite-dribble;
+		}
+		}
+	}
+	}
+	.bottom {
+		padding: 28px 0;
+		.nav {
+			a {
+				text-transform: uppercase;
+				text-decoration: none;
+				color: $grey;
+				font-weight: bold;
+				font-size: 17px;
+				margin-right: 27px;
+				&:hover {
+					color: $lightGreen;
+				}
+			}
+			
+		}
+	}
+}
+.slider {
+	position: relative;
+	background: url(../img/slider.png) no-repeat center;
+	min-height: 795px;
+	background-size: cover;
+	p {
+		text-transform: uppercase;
+	}
+	.description {
+		position: absolute;
+		bottom: 49px;
+		margin: auto;
+		left: 0;
+		right: 0;
+		text-align: center;
+		width: 755px;
+		font-size: 15px;
+		font-weight: bold;
+		line-height: 24px;
+		.button {
+			margin-top: 24px;
+		}
+	}
+}
+.button {
+	text-transform: uppercase;
+	background: $lightGreen;
+	color: white;
+	font-weight: bold;
+	padding: 8px 12px;
+	display: inline-block;
+}
+.main-area {
+	.video-block {
+		background: $grey3;
+		padding-top: 36px;
+		overflow: hidden;
+		padding-bottom: 16px;
+		.video {
+			float: left;
+		}
+		.description {
+			float: right;
+			width: 530px;
+			h2 {
+				margin-bottom: 24px;
+			}
+			p {
+				font-size: 13px;
+				line-height: 21px;
+				margin-bottom: 25px;
+			}
+		}
+	}
+}
+
+/******** General styles ends ********/
