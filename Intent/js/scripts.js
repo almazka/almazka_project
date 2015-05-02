@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	$('.slider-area').slick({
+		autoplay: false,
 		prevArrow: '.photo-slider .prev',
 		nextArrow: '.photo-slider .next',
 		dots: true,
