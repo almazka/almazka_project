@@ -614,7 +614,7 @@ html, .footer, .top-social, .top-container {
 	font-family: "HelveticaBold";
 	font-size: 12px;
 }
-.top .nav li a:hover, .menu-gallery li:hover, .marker {
+.top .nav li a:hover, .marker {
 	color: #ea5a4b;
 }
 .top {
@@ -665,20 +665,26 @@ html, .footer, .top-social, .top-container {
 .big-gallery {
 	padding: 0 0 19px 25px;
 }
+#container ul.hidden{
+	display:none;
+}
 .menu-gallery {
 	padding-top: 4px;
-	li {
+	a {
+		text-decoration: none;
+		color: #252525;
 		font-family: "Bitter";
 		font-size: 14px;
 		display: inline-block;
 		margin-right: 17px;
-		cursor: pointer;
+		&:hover {
+			color: #ea5a4b;
+		}
 		&:first-of-type {
 			margin-left: 0;
 		}
 		&.active {
 			padding: 8px 8px;
-			cursor: default;
 			background: #ea5a4b;
 			color: #FFF;
 			font-weight: bold;
@@ -688,7 +694,7 @@ html, .footer, .top-social, .top-container {
 		}
 	}
 }
-.menu-gallery li.active, button.orange{
+button.orange{
 	background: #ea5a4b;
 	color: #FFF;
 	font-weight: bold;

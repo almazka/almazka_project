@@ -2,27 +2,9 @@
 <html lang="ru">
 <head>
 <!-- Удалить после верстки -->
-	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
-	<script type="text/javascript" src="pixLayout/pixLayout.js"></script>
-	<script type="text/javascript">
-		$(function(){
-				$.pixlayout("pixLayout/layout-home.jpg");
-				$.pixlayout({
-				src: "pixLayout/layout-home.jpg",
-				opacity: 0.5,
-				top: 0,
-				left: 134,
-				right: 135,
-				center: true,
-				clip: true,
-				show: true
-		}, ".wrapper");
-		});
-	</script>
+	
 <!-- Удалить после верстки -->
 
-<script type="text/javascript" src="js/slick.min.js"></script>
-<script type="text/javascript" src="js/scripts.js"></script>
 <link rel="icon" href="favicon.ico">
 <title>Intent</title>
 <link href="css/style.css" rel="stylesheet">
@@ -181,24 +163,22 @@
 				</ul>
 				</div>
 				<div class="big-gallery">
-					<ul class="menu-gallery">
-						<li class="active">All</li>
-						<li>Print</li>
-						<li>Photography</li>
-						<li>Web</li>
-						<li>Animation</li>
-					</ul>
-					<ul class="gallery-area">
-						<li><img src="img/gallery1.jpg" alt="Business Cards"><span></span><b>Business Cards</b></li>
-						<li><img src="img/gallery2.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery3.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery4.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery5.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery6.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery7.jpg" alt=""><span></span><b>alt</b></li>
-						<li><img src="img/gallery8.jpg" alt=""><span></span><b>alt</b></li>
-					</ul>
-				</div></div>
+					<div id="filter" class="menu-gallery menu">
+					</div>
+					<div id="container">
+					<ul id="stage" class="gallery-area">
+							<li data-tags="Web, Print, Photography, Animation"><img src="img/gallery1.jpg" alt="Business Cards"><span></span><b>Business Cards</b></li>
+							<li data-tags="Print, Photography"><img src="img/gallery2.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Web, Animation, Photography"><img src="img/gallery3.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Web, Photography"><img src="img/gallery4.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Print, Web, Animation"><img src="img/gallery5.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Web, Print"><img src="img/gallery6.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Animation, Web"><img src="img/gallery7.jpg" alt=""><span></span><b>alt</b></li>
+							<li data-tags="Print, Animation"><img src="img/gallery8.jpg" alt=""><span></span><b>alt</b></li>
+						</ul>
+					</div>
+				</div>
+			</div>
 	<div id="push"></div>
 </div>
 	<div class="footer">
@@ -242,7 +222,25 @@
 			</div>
 		</div>
 	</div>
-
-	
+	<script src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="pixLayout/pixLayout.js"></script>
+	<script type="text/javascript">
+		$(function(){
+				$.pixlayout("pixLayout/layout-home.jpg");
+				$.pixlayout({
+				src: "pixLayout/layout-home.jpg",
+				opacity: 0.5,
+				top: 0,
+				left: 134,
+				right: 135,
+				center: true,
+				clip: true,
+				show: true
+		}, ".wrapper");
+		});
+	</script>
+	<script type="text/javascript" src="js/jquery.quicksand.js"></script>
+	<script type="text/javascript" src="js/slick.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
 	</body>
 </html>
