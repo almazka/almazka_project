@@ -233,11 +233,19 @@ html, .footer, .top-social, .top-container {
 	margin: 0 auto;
 	width: 940px;
 }
-.big-container {
-	margin: 0 auto;
-	margin-top: 200px;
-	width: 1022px;
+.photo-header {
+	width: 100%;
 	position: relative;
+	background: url("../img/blog-title.jpg");
+	height: 150px;
+	background-size: cover;
+	margin-bottom: 98px;
+	.container {
+		position: absolute;
+		bottom: -101px;
+		right: 0;
+		left: 0;
+	}
 }
 
 
@@ -340,13 +348,7 @@ html, .footer, .top-social, .top-container {
 		}
 	}
 }
-.big-container .container {
-	position: absolute;
-	z-index: 100;
-	bottom: -98px;
-	right: 41px;
-	overflow: hidden;
-}
+
 .section .container {
 	border: 1px solid #dfdfdf;
 	padding: 104px 24px 16px 24px;
@@ -355,16 +357,17 @@ html, .footer, .top-social, .top-container {
 	overflow: hidden;
 }
 .post {
-	padding-bottom: 21px;
 	border-bottom: 5px solid #ea5a4b;
 	margin-right: 28px;
-	padding-top: 16px;
+	padding-top: 31px;
+	padding-bottom: 12px;
 }
 .posts .post:first-of-type {
 	padding-top: 0;
 }
 .posts .post:last-of-type {
 	border-bottom: none;
+	padding-top: 34px;
 }
 .posts {
 	width: 679px;
@@ -372,8 +375,6 @@ html, .footer, .top-social, .top-container {
 }
 .pages {
 	clear: both;
-	margin-bottom: 13px;
-	padding-top: 3px;
 }
 .pages span {
 	padding: 7px;
@@ -390,17 +391,21 @@ html, .footer, .top-social, .top-container {
 }
 .post h2 {
 	font-size: 18px;
+	margin-bottom: 17px;
 }
 .text {
 	float: left;
 	width: 497px;
 	margin-left: 25px;
+	p {
+		margin-bottom: 19px;
+	}
 }
 .text p, .pages span{
 	line-height: 18px;
 }
 .text p, .pages span, .bar p, .bar .categ li, .text-address p {
-	font-family: Helvetica;
+	font-family: "Helvetica";
 	font-size: 14px;
 }
 .text a {
@@ -410,22 +415,23 @@ html, .footer, .top-social, .top-container {
 }
 .post-info {
 	overflow: hidden;
-	margin-top: 13px;
+	padding-top: 26px;
 }
 .data {
 	float: left;
 	width: 122px;
-	padding-left: 3px;
-}
-.data h4 {
-	font-size: 14px;
-	margin: 14px 0 5px 0px;
-}
-.data p {
-	margin: 0;
-	font-family: Helvetica;
-	font-size: 12px;
-	color: #ea5a4b;
+	padding: 4px 0 0 3px;
+	h4 {
+		font-size: 14px;
+		margin: 0px 0 7px 0px;
+		font-family: "Bitter";
+	}
+	p {
+		font-family: "Helvetica";
+		font-size: 12px;
+		color: #ea5a4b;
+		margin-bottom: 17px;
+	}
 }
 .sidebars {
 	float: right;
@@ -489,20 +495,21 @@ html, .footer, .top-social, .top-container {
 	border-top: none;
 	overflow: hidden;
 	background: #FFF;
-	width: 938px;
+	width: 890px;
 	margin: 0 auto;
+	padding: 28px 24px;
 }
 .three-article {
-	padding-top: 47px;
+	margin-top: 19px;
 	overflow: hidden;
 	.coloumn {
-		width: 274px;
+		width: 272px;
 		float: left;
-		padding-left: 28px;
 		&:last-of-type {
 			float: right;
-			padding-left: 0;
-			padding-right: 23px;
+		}
+		&.center {
+			padding-left: 28px;
 		}
 	}
 	h2 {
@@ -635,19 +642,18 @@ html, .footer, .top-social, .top-container {
 	padding: 0;
 }
 .top-container {
-	padding: 28px 27px 24px 27px;
+	padding: 38px 30px 40px 38px;
 	margin: 0;
 	color: #fff;
-	min-height: 79px;
+	font-family: "Bitter";
+	font-weight: bold;
 }
 .top-container h1 {
-	margin: 0;
 	font-size: 29px;
-	padding: 8px 0 4px 12px;
+	margin-bottom: 10px;
 }
 .top-container > strong {
-	padding-left: 12px;
-	word-spacing: 3px;
+	font-size: 14px;
 }
 .slider-points span{
 	display: inline-block;
@@ -661,9 +667,6 @@ html, .footer, .top-social, .top-container {
 }
 .slider-points span.active img {
 	z-index: 1;
-}
-.big-gallery {
-	padding: 0 0 19px 25px;
 }
 #container ul.hidden{
 	display:none;
@@ -728,7 +731,7 @@ form button {
 	}
 }
 .gallery-area {
-	margin: 5px 0 8px 0;
+	margin-top: 4px;
 }
 .gallery-area li {
 	display: inline-block;
@@ -759,11 +762,8 @@ form button {
 .gallery-area li:nth-of-type(4n+1) {
 	margin: 21px 0 0px 0px;
 }
-.map {
-	margin-top: 18px;
-}
 .description {
-	padding-top: 27px;
+	padding-top: 31px;
 	overflow: hidden;
 }
 .text-address {
@@ -771,7 +771,8 @@ form button {
 	width: 235px;
 }
 .text-address p {
-	margin: 0 0 14px 0;
+	margin-bottom: 14px;
+	line-height: 16px;
 }
 .form-message {
 	float: right;
@@ -800,10 +801,7 @@ form input {
 .form-message form textarea {
 	clear: both;
 	width: 576px;
-	height: 184px;
-}
-.form-message form {
-	margin-bottom: 13px;
+	height: 186px;
 }
 .footer {
 	color: #ADADAD;
