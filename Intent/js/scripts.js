@@ -13,6 +13,7 @@ $(document).ready(function(){
 	}
 
 /*filter image block*/
+if($('#filter').length > 0){
 var items = $('#stage li'),
 	itemsByTags = {};
 
@@ -89,6 +90,6 @@ function createList(text,items){
 		data: {list:ul}
 	}).appendTo('#filter');
 }
-
+}
 
 });

@@ -57,12 +57,28 @@ $darkGrey: #3c3e3f;
 $darkHoar: #2b2c2d;
 $hoar2: #393b3c;
 $hoar3: #494c4d;
+$footerSize: 264px;
 
+html, body {
+	height: 100%;
+}
 body {
-	color: $colorGrey;
-	min-width: 950px;
-	min-height: 100%;
 	font-family: 'Open Sans', sans-serif;
+	color: $colorGrey;
+}
+#main-container {
+	min-height: 100%;
+	height: auto !important; /* for IE6 support */
+	height: 100%;
+	margin: 0 auto;
+	margin-bottom: -$footerSize;
+}
+#push, #footer {
+	height: $footerSize;
+}
+.wrap {
+	width: 1160px;
+	margin: 0 auto;
 }
 h1 {
 	font-size: 44px;
@@ -73,10 +89,6 @@ h1, h2 {
 h2 {
 	color: $colorGrey;
 	font-size: 26px;
-}
-.wrap {
-	width: 1160px;
-	margin: 0 auto;
 }
 .social {
 	a {
@@ -225,10 +237,11 @@ h2 {
 			}
 		}
 		}
-	}
+}
 .modal {
-	display: inline-block;
-	position: relative;
+	display: block;
+	position: absolute;
+	z-index: 100;
 	border: 2px solid $grey4;
 	border-radius: 5px;
 	color: $colorGrey;
@@ -248,46 +261,53 @@ h2 {
 		width: 29px;
 		height: 14px;
 		bottom: -12px;
+		left: 0;
+		right: 0;
+		margin: auto;
 	}
 }
 .top3 {
 	overflow: hidden;
 	.nav {
 		float: left;
-		li {
-			&:first-of-type {
-				padding-left: 15px;
-				border-left: none;
-			}
-			&:hover {
-				color: $hoverBlue;
-			}
-			&.active {
-				text-transform: uppercase;
-				color: $hoverBlue;
-				position: relative;
-				&::after {
-					content: "";
-					display: block;
-					position: absolute;
-					left: 0px;
-					right: 0;
-					bottom: 0px;
-					width: 0px;
-					height: 0px;
-					margin: auto;
-					border-left: 21px solid transparent;
-					border-right: 21px solid transparent;
-					border-bottom: 10px solid $superBlue;
-				}
-			}
+		a {
+			text-decoration: none;
+			color: $colorGrey;
+			position: relative;
 			display: inline-block;
 			font-weight: bold;
 			font-size: 13px;
 			border-left: 1px solid $lightGrey;
 			padding: 0px 22px;
 			line-height: 86px;
-			cursor: pointer;
+			&:first-of-type {
+				padding-left: 15px;
+				border-left: none;
+			}
+			&::after {
+				content: "";
+				display: none;
+				position: absolute;
+				left: 0px;
+				right: 0;
+				bottom: 0px;
+				width: 0px;
+				height: 0px;
+				margin: auto;
+				border-left: 21px solid transparent;
+				border-right: 21px solid transparent;
+				border-bottom: 10px solid $superBlue;
+			}
+			&:hover {
+				color: $hoverBlue;
+				&::after {
+					display: block;
+				}
+			}
+			&.active {
+				text-transform: uppercase;
+				color: $hoverBlue;
+			}
 		}
 	}
 	.search {
@@ -334,12 +354,12 @@ h2 {
 		}
 	}
 }
-.slider {
-	overflow: hidden;
-	width: 755px;
+.slider-area {
+	width: 644px;
 	float: right;
-	margin-top: 155px;
+	margin: 155px 111px 0 0;
 	.slide {
+		width: 322px !important;
 		float: left;
 		position: relative;
 		.art-top {
@@ -348,41 +368,88 @@ h2 {
 			width: 100%;
 			bottom: 0;
 			text-align: center;
-			span {
+			a {
 				position: absolute;
+				text-decoration: none;
 				margin-top: 25px;
 				padding-left: 8px;
-				cursor: pointer;
-			}
-			& span::before {
-				content:"";
-				display: block;
-				position: absolute;
-				left: -35px;
-				top: -7px;
-				width: 32px;
-				height: 29px;
+				i {
+					display: block;
+					position: absolute;
+					left: -35px;
+					top: -7px;
+					width: 32px;
+					height: 29px;
+				}
 			}
 			&.green {
 				background: rgba(134, 215, 107, 0.87);
-				span::before {
-					@extend .sprite-likegreen;
+				a {
+					color: #fff;
+					i {
+						@extend .sprite-likegreen;
+					}
 				}
 			}
 			&.yellow {
 				background: rgba(236, 234, 113, 0.87);
-				span {
+				a {
 					color: $darkYellow;
-				}
-				span::before {
-					@extend .sprite-likeyellow;
+					i {
+						@extend .sprite-likeyellow;
+					}
 				}
 			}
 		}
 	}
-	.next {
-		float: left;
-		position: relative;
+	.slick-prev,
+	.slick-next {
+		position: absolute;
+		height: 242px;
+		top: 0;
+		background: $lightGrey2;
+		width: 111px;
+		cursor: pointer;
+		display: block;
+		line-height: 0px;
+		font-size: 0px;
+		color: transparent;
+		padding: 0;
+		border: none;
+		outline: none;
+		&:hover, &:focus {
+			outline: none;
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 23px;
+			height: 40px;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+		}
+		&.slick-disabled {
+			opacity: 0;
+			cursor: default;
+		}
+	}
+	.slick-prev {
+		left: -111px;
+		&:before {
+			@extend .sprite-larrow;
+		}
+	}
+	.slick-next {
+		right: -111px;
+		&:before {
+			@extend .sprite-rarrow;
+		}
+	}
+	.controls div {
+		position: absolute;
 		height: 243px;
 		width: 111px;
 		background: $lightGrey2;
@@ -391,7 +458,7 @@ h2 {
 			position: absolute;
 			width: 23px;
 			height: 40px;
-			@extend .sprite-arrow;
+			@extend .sprite-larrow;
 			top: 0;
 			left: 0;
 			right: 0;
@@ -522,17 +589,22 @@ h2 {
 		margin: 0 auto;
 		margin-top: 79px;
 		a {
+			width: 152px;
 			border: 2px solid $greyCe;
 			text-decoration: none;
 			font-weight: bold;
 			color: $greyCe;
-			border-radius: 3px;
+			border-radius: 6px;
 			padding: 12px 0 13px 0;
 			text-align: center;
 			display: inline-block;
-			margin-right: 11px;
+			margin-right: 15px;
+			&:first-of-type {
+				width: 119px;
+			}
 			&:last-of-type {
 				margin-right: 0;
+				width: 95px;
 			}
 			&:hover {
 				color: $colorGrey;
@@ -544,22 +616,10 @@ h2 {
 				color: $colorGrey;
 			}
 			}
-			.all {
-				width: 119px;
-			}
-			.mobileapps {
-				width: 152px;
-			}
-			.identities {
-				@extend .mobileapps;
-			}
-			.interiordesign {
-				@extend .mobileapps;
-			}
-			.uiux {
-				width: 95px;
-			}
 	}
+}
+#container ul.hidden{
+	display:none;
 }
 .menu-list {
 	margin-top: 50px;
@@ -569,7 +629,7 @@ h2 {
 		width: 277px;
 		background: #FFF;
 		border-radius: 8px;
-		margin: 0px 0px 17px 12px;
+		margin: 0px 0px 17px 15px;
 		&:nth-of-type(4n+1) {
 			margin-left: 0;
 		}
@@ -703,19 +763,21 @@ h2 {
 	}
 }
 .section-map {
-	background: url(../img/map.jpg) no-repeat center;
-	background-size: cover;
-	height: 497px;
-	width: 100%;
 	margin-top: 100px;
 	position: relative;
+	.ban {
+		z-index: 100;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		display: block;
+	}
 	.modal {
 		margin-bottom: 5px;
 		border-width: 1px;
 		z-index: 100;
 		b {
 			@extend .sprite-trangle1;
-			background-position: 0 -1323px;
 		}
 	}
 	.bigContacts {
@@ -781,7 +843,7 @@ h2 {
 		}
 		}
 	}
-.footer {
+#footer {
 	background: $darkHoar;
 	padding-top: 79px;
 	.top {
@@ -876,3 +938,9 @@ h2 {
 }
 
 /******** General styles ends ********/
+
+/******** Slick styles ********/
+@import url(../css/slick.css);
+
+
+/******** Slick styles ends ********/
