@@ -624,7 +624,6 @@ h2 {
 .menu-list {
 	margin-top: 50px;
 	.item {
-		cursor: pointer;
 		display: inline-block;
 		width: 277px;
 		background: #FFF;
@@ -941,6 +940,6 @@ h2 {
 
 /******** Slick styles ********/
 @import url(../css/slick.css);
-
+@import url(../css/colorbox.css);
 
 /******** Slick styles ends ********/

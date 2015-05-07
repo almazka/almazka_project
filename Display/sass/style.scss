@@ -57,6 +57,7 @@ $grey4: #322f2f;
 $grey5: #a5a5a5;
 $grey6: #423e3e;
 $lightGreen: #2ecc71;
+$footersize: 203px;
 
 html, body {
 	height: 100%;
@@ -65,14 +66,15 @@ body {
 	font-family: "Novecento", Arial;
 	color: $grey1;
 }
-#container {
+#main-container {
 	min-height: 100%;
 	height: auto !important; /* for IE6 support */
 	height: 100%;
-	margin: 0 auto -203px;
+	margin: 0 auto;
+	margin-bottom: -$footersize;
 }
 #push, #footer {
-	height: 203px;
+	height: $footersize;
 }
 h1, h2, h3 {
 	text-transform: uppercase;
@@ -400,11 +402,6 @@ form {
 }
 .carousel-block {
 	padding-top: 47px;
-	.carousel {
-		div {
-			display: inline-block;
-		}
-	}
 	.description {
 		width: 711px;
 		margin: 0 auto;
@@ -419,77 +416,151 @@ form {
 	}
 	.carousel {
 		width: 100%;
+		height: 200px;
 		margin: 43px auto;
-		.h-carousel-wrapper {
-			width: 100%;
-			overflow: hidden;
-			margin: 0 auto;
-			.h-carousel-items {
-				width: 10000px;
-				div {
-					a {
-						background: rgba(255, 255, 255, 0.6);
-						z-index: 100;
-						&:hover {
-							background: none;
-							transition: all 0.4s ease-out 0s;
-						}
-					}
-				}
-			}
+		.slide {
+			width: 300px !important;
+			margin-right: 20px;
+			position: relative;
 		}
 	}
 	.carousel-second {
-		margin: 43px auto;
+		margin: 47px auto;
 		width: 646px;
 		position: relative;
 		text-align: center;
-		i {
+		.bx-controls-direction a {
 			width: 21px;
 			height: 31px;
 			display: block;
 			cursor: pointer;
 			position: absolute;
 			top: 23px;
+			text-indent: -9999px;
 		}
-		.prev {
+		.bx-prev {
 			@extend .sprite-arrowl;
+			left: 0;
 		}
-		.next {
+		.bx-next {
 			@extend .sprite-arrowr;
 			right: 0;
 		}
-		.carousel-wrapper {
-			width: 480px;
-			overflow: hidden;
-			margin: 0 auto;
-			.carousel-items {
-				h3 {
-					font-size: 17px;
-					padding-bottom: 16px;
-				}
-				p {
-					font-size: 13px;
-					line-height: 23px;
-				}
+		.item {
+			h3 {
+				font-size: 17px;
+				padding-bottom: 16px;
 			}
+			p {
+				font-size: 15px;
+				line-height: 23px;
+				padding: 0px 60px;
+			}
+		}
+		.bx-pager {
+			font-size: 0;
+		}
+		.bx-controls {
+			
 		}
 	}
 }
+.carousel .bx-viewport {
+	width: 108% !important;
+	position: absolute !important;
+	left: -8% !important;
+}
+.carousel .bx-wrapper {
+	max-width: 100% !important;
+}
+.carousel .bx-controls {
+	font-size: 0;
+}
+.carousel .slide a, .work-items li a {
+	position: absolute;
+	width: 300px;
+	height: 200px;
+	top: 0;
+	left: 0;
+	background: rgba(255, 255, 255, 0.6);
+	z-index: 100;
+	&:hover {
+		background: none;
+		transition: all 0.4s ease-out 0s;
+	}
+	i {
+		width: 98px;
+		height: 98px;
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		margin: auto;
+		background: $lightGreen;
+		border-radius: 100px;
+		display: none;
+		&::after {
+			content: "";
+			width: 33px;
+			height: 42px;
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			margin: auto;
+			@extend .sprite-link;
+		}
+	}
+	&:hover i {
+		display: block;
+	}
+}
+#container ul.hidden{
+	display:none;
+}
 .work {
-	.h-carousel-items {
+	.work-items {
+		overflow: hidden;
 		padding-bottom: 41px;
-		div {
-			margin: 20px 15px 0px 0;
-			&:nth-of-type(3n){
-				margin-right: 0;
-			}
+		ul li {
+			position: relative;
 			a {
 				height: 220px;
+				background: none;
 				&:hover {
 					background: rgba(255, 255, 255, 0.6);
 					transition: all 0.4s ease-out 0s;
 				}
+			}
+		}
+		ul.grid li {
+			width: 300px;
+			float: left;
+			margin: 20px 15px 0px 0;
+			&:nth-of-type(3n){
+				margin-right: 0;
+			}
+			p {
+				display: none;
+			}
+		}
+		ul.list {
+			height: 100% !important;
+		}
+		ul.list li {
+			overflow: hidden;
+			margin-bottom: 30px;
+			img {
+				float: left;
+			}
+			p {
+				display: block;
+				float: left;
+				padding: 30px;
+				width: 300px;
 			}
 		}
 	}
@@ -509,60 +580,24 @@ form {
 				width: 15px;
 				height: 15px;
 				margin-left: 10px;
-				&:nth-of-type(1) {
+				&.grid {
 					@extend .sprite-grid;
 				}
-				&:nth-of-type(2) {
+				&.grid.active {
+					@extend .sprite-grid.grid-hover;
+				}
+				&.list {
 					@extend .sprite-list;
+				}
+				&.list.active {
+					@extend .sprite-list.list-hover;
 				}
 			}
 		}
 		
 	}
 }
-.h-carousel-items {
-	div {
-		display: inline-block;
-		position: relative;
-		a {
-			position: absolute;
-			width: 300px;
-			height: 200px;
-			top: 0;
-			left: 0;
-			z-index: 100;
-			i {
-				width: 98px;
-				height: 98px;
-				display: block;
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				right: 0;
-				margin: auto;
-				background: $lightGreen;
-				border-radius: 100px;
-				display: none;
-				&::after {
-					content: "";
-					width: 33px;
-					height: 42px;
-					position: absolute;
-					top: 0;
-					bottom: 0;
-					left: 0;
-					right: 0;
-					margin: auto;
-					@extend .sprite-link;
-				}
-			}
-			&:hover i {
-				display: block;
-			}
-		}
-	}
-}
+
 #footer {
 	text-transform: uppercase;
 	.top {
@@ -629,8 +664,5 @@ form {
 		}
 	}
 }
-
-
-
 
 /******** General styles ends ********/

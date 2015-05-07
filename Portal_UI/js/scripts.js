@@ -7,6 +7,12 @@ $(document).ready(function(){
 		});
 	}
 
+/*colorbox*/
+if($('.colorbox-item').length > 0){
+$(".colorbox-item").colorbox();
+}
+/*end colorbox*/
+
 /*tooltip*/
 if ($('[rel~=tooltip]').length > 0){
 var targets = $( '[rel~=tooltip]' ),
