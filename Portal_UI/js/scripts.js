@@ -9,7 +9,7 @@ $(document).ready(function(){
 
 /*colorbox*/
 if($('.colorbox-item').length > 0){
-$(".colorbox-item").colorbox();
+$(".colorbox-item").colorbox({rel: true});
 }
 /*end colorbox*/
 

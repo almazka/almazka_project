@@ -1,4 +1,24 @@
 $(document).ready(function(){
+	/*img message*/
+/*if($('.alt-msg').length > 0){
+	
+	$('.alt-msg').on("mouseenter", function(){
+		picture	= $(this);
+		str	= picture.attr( 'alt' );
+		b = $( '<b></b>' );
+		if( !str || str == '' )
+			return false;
+		b.css( 'opacity', 0 ).html(str).appendTo( 'body' );
+	});
+}*/
+/*end img message*/
+/*colorbox*/
+if($('a.colorbox-item').length > 0){
+$(".colorbox-item").colorbox();
+}
+/*end colorbox*/
+
+/*slider*/
 	if($('.slider-area').length > 0){
 		$('.slider-area').slick({
 			autoplay: false,
@@ -11,6 +31,7 @@ $(document).ready(function(){
 			cssEase: 'linear'
 		});
 	}
+/*end slider*/
 
 /*filter image block*/
 if($('#filter').length > 0){
