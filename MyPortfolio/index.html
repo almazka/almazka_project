@@ -32,7 +32,7 @@
 							<a href="#what">Что я делаю</a>
 							<a href="#about">Обо мне</a>
 							<a href="#works">Примеры работ</a>
-							<a href="contacts">Контакты</a>
+							<a href="#contacts">Контакты</a>
 						</div>
 						<a href="#order" class="button">Заказать верстку</a>
 					</div>
@@ -50,7 +50,7 @@
 			<div class="wrap">
 				<div class="title">
 					<img src="img/girl.png" alt="What I do?">
-					<h1>Что я делаю</h1>
+					<h1 id="what">Что я делаю</h1>
 				</div>
 				<p>Верстаю сайты - от самых простых одностраничников - до сложных лендингов и интернет-магазинов. Выполняю верстку с нуля, а также могу править и доводить до ума уже сверстанные страницы.<br>
 				Верстаю пиксель в пиксель по предоставленному PSD-макету. Обязательно наличие технического задания (информации, что требуется сделать, пожелания по верстке)б т.к. я не сотворяю новый дизайн, я верстаю по готовому макету.
@@ -66,21 +66,24 @@
 		<div class="about">
 			<div class="wrap">
 				<div class="title">
-					<h1>Подробнее обо мне</h1>
-					<img src="img/photo.png" height="170" width="170" alt="Almazka">
+					<h1 id="about">Подробнее обо мне</h1>
+					<img src="img/myface.png" height="170" width="170" alt="Almazka">
 				</div>
-				<p>Приветствую всех, кто зашел на мой сайт! Меня зовут Алена, я живу в городе Омске. Web-версткой занимаюсь около трех лет, и на данный момент мной сверстано уже много сайтов различной тематики и сложности.<br>
-				Владею всеми принципами верстки, удовлетворяющими основным стандартам и требованиям заказчика:<br>
-					&mdash; стандарты W3C<br>
-					&mdash; кроссбраузерность (IE7-9, Opera 9+, FireFox 2+, Safari 4+, Chrome)<br>
-					&mdash; идентичность макету<br>
-					&mdash; блочная (div) верстка<br>
-					&mdash; валидный семантический код<br>
-					&mdash; минимум лишнего кода<br>
-					&mdash; внутренняя оптимизация для поисковых машин<br>
-					&mdash; реализация интерактивных элементов страницы на jQuery.<br>
-				В подходе к делам я перфекционистка, поэтому особое внимание уделяю структурированности кода, комментариям, грамотным именам классов. Также в работе мне помогает такое качество, как усидчивость.<br>
-				Имея со мной дело, Вы можете быть уверены в моей отзывчивости к Вам, ответственности в выполнении ТЗ.<br>
+				<p>Приветствую всех, кто зашел на мой сайт! Меня зовут Алена, я живу в городе Омске. Веб-версткой занимаюсь около трех лет, и на данный момент мной сверстано уже много сайтов различной тематики и сложности.<br>
+				Владею всеми принципами верстки, удовлетворяющей основным стандартам и требованиям заказчика:
+				&mdash; стандарты W3C
+				&mdash; кроссбраузерность (IE7-9, Opera 9+, FireFox 2+, Safari 4+, Chrome)
+				&mdash; идентичность макету
+				&mdash; блочная (div) верстка
+				&mdash; валидный семантический код
+				&mdash; минимум лишнего кода
+				&mdash; внутренняя оптимизация для поисковых машин
+				&mdash; реализация интерактивных элементов страницы на jQuery.
+				</p>
+				<p>
+				В подходе к делам я перфекционистка, поэтому особое внимание уделяю структурированности кода, комментариям, грамотным именам классов. Также в работе мне помогает такое качество, как усидчивость.
+				</p>
+				<p>Имея со мной дело, Вы можете быть уверены в моей отзывчивости к Вам, ответственности в выполнении ТЗ.<br>
 				Смело обращайтесь, сегодня отличный день для нашего с Вами сотрудничества!
 				</p>
 			</div>
@@ -90,128 +93,139 @@
 			<div class="wrap">
 				<div class="title">
 					<img src="img/works.png" height="136" width="136" alt="my works">
-					<h1>Мои работы</h1>
+					<h1 id="works">Мои работы</h1>
 				</div>
+				
 				<ul id="filter">
+					<li class="filter active" data-filter="all"><span>Все</span></li>
+					<li class="filter" data-filter=".sites"><span>Простые сайты</span></li>
+					<li class="filter" data-filter=".lendings"><span>Лендинги</span></li>
+					<li class="filter" data-filter=".eshops"><span>Интернет-магазины</span></li>
+					<li class="filter" data-filter=".adaptive"><span>Адаптивная верстка</span></li>
 				</ul>
-				<div id="container">
-					<ul id="stage">
-						<li data-tags="Простые сайты, Адаптивная верстка">
+				<ul id="container">
+						<li class="mix adaptive eshops">
 							<img src="img/display.jpg" height="320" width="300" alt="Display">
 							<span class="blank">
 								<span class="layer"><h4>Display</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/display_home.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/display_home.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Интернет-магазины, Адаптивная верстка">
+						<li class="mix sites adaptive lendings">
 							<img src="img/intent.jpg" height="319" width="300" alt="Intent">
 							<span class="blank">
 								<span class="layer"><h4>Intent</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/intent.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/intent.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Простые сайты, Лендинги">
+						<li class="mix lendings">
 							<img src="img/portal-ui.jpg" height="320" width="300" alt="Portal UI">
 							<span class="blank">
 								<span class="layer"><h4>Portal UI</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Простые сайты, Адаптивная верстка">
+						<li class="mix sites eshops">
 							<img src="img/display.jpg" height="320" width="300" alt="Display">
 							<span class="blank">
 								<span class="layer"><h4>Display</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/display_home.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/display_home.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Лендинги, Адаптивная верстка">
+						<li class="mix eshops adaptive lendings">
 							<img src="img/intent.jpg" height="319" width="300" alt="Intent">
 							<span class="blank">
 								<span class="layer"><h4>Intent</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/intent.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/intent.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Интернет-магазины, Адаптивная верстка">
+						<li class="mix sites">
 							<img src="img/portal-ui.jpg" height="320" width="300" alt="Portal UI">
 							<span class="blank">
 								<span class="layer"><h4>Portal UI</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Простые сайты, Лендинги, Интернет-магазины">
+						<li class="mix lendings adaptive">
 							<img src="img/display.jpg" height="320" width="300" alt="Display">
 							<span class="blank">
 								<span class="layer"><h4>Display</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/display_home.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/display_home.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Простые сайты, Интернет-магазины">
+						<li class="mix eshops">
 							<img src="img/intent.jpg" height="319" width="300" alt="Intent">
 							<span class="blank">
 								<span class="layer"><h4>Intent</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/intent.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/intent.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-						<li data-tags="Лендинги, Интернет-магазины">
+						<li class="mix adaptive lendings">
 							<img src="img/portal-ui.jpg" height="320" width="300" alt="Portal UI">
 							<span class="blank">
 								<span class="layer"><h4>Portal UI</h4></span>
 								<a href="#" class="stage-lnk link" target="_blank"><b></b><span>Перейти на сайт</span></a>
-								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom"><b></b><span>Увеличить скриншот</span></a>
+								<a href="img/big/Portal_UI.jpg" class="stage-lnk zoom" rel="prettyPhoto[gallery]"><b></b><span>Увеличить скриншот</span></a>
 							</span>
 						</li>
-					</ul>
-				</div>
+				</ul>
 			</div>
 		</div>
 		<div class="order">
-			<div class="topline"></div>
-			<wrap>
+			<div class="topline fly"></div>
+			<div class="wrap">
 				<div class="title">
 					<img src="img/order.png" height="135" width="136" alt="">
-					<h1></h1>
+					<h1 id="order">Как заказать верстку?</h1>
 				</div>
-				<p></p>
-			</wrap>
+				<p>
+					Чтобы заказать web-верстку, просто свяжитесь со мной через Skype - <span>almazka987</span> или напишите на мой e-mail по адресу <span>almazka@flylady.su</span>. Желательно сразу выслать PSD-макет или скриншот проекта, для того, чтобы я могла оценить сложность работы и сказать Вам срок и стоимость выполнения. В переписке будут оговорены все спорные и дополнительные вопросы.
+				</p>
+			</div>
+			<div class="fly bottomline"></div>
 		</div>
 		</div>
 	<div id="push"></div>
 </div>
 <div id="footer">
-	<div class="topline"></div>
 	<div class="wrap">
 		<div class="top">
-			<p></p>
+			<p>Яковленко Алена<br>
+				Веб-верстка, создание сайтов
+			</p>
 		</div>
 		<div class="bottom">
-			<div class="contacts">
-				<i></i>
-				<span></span>
-				<i></i>
-				<span></span>
-				<i></i>
-				<span></span>
+			<div id="contacts">
+				<span><i class="point"></i>
+				Россия, Омск</span>
+				<span><i class="skype"></i>
+				Skype: almazka987</span>
+				<span><i class="mail"></i>
+				E-mail: almazka@flylady.su</span>
 			</div>
 			<div class="menu">
-				<a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
-				<a href="#"></a>
+				<a href="#what">Что я делаю</a>
+				<a href="#about">Обо мне</a>
+				<a href="#works">Примеры работ</a>
+				<a href="#order">Как заказать верстку</a>
 			</div>
+		</div>
+		<div class="copyright">
+			<p>© 2015 AlmazkaMaster</p>
 		</div>
 	</div>
 </div>
 		<script src="js/jquery-1.11.2.min.js"></script>
-		<script type="text/javascript" src="js/jquery.quicksand-1.4.js"></script>
-		<script type="text/javascript" src="js/jquery.colorbox-min.js"></script>
+		<script type="text/javascript" src="js/jquery.mixitup.min.js"></script>
+		<script type="text/javascript" src="js/jquery.prettyPhoto.js"></script>
 		<script type="text/javascript" src="pixLayout/pixLayout.js"></script>
 		<script type="text/javascript">
 			$(function(){

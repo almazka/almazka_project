@@ -38,8 +38,9 @@ $sprite-spacing: 10px;
 */
 
 /* variables */
-$footerSize: 254px;
+$footerSize: 249px;
 $grey1: #383838;
+$darkGrey: #424242;
 $lightGrey: #e0e0e0;
 $pinky: #ebadad;
 $bordo: #b70001;
@@ -169,6 +170,11 @@ p {
 				padding: 6px 15px;
 				margin: 35px 0 0 85px;
 				text-decoration: none;
+				&:hover {
+					color: #000;
+					border-color: #000;
+					text-shadow: rgba(255, 255, 255, 1) 0px 2px 1px;
+				}
 			}
 		}
 	}
@@ -221,7 +227,7 @@ p {
 }
 .about {
 	color: $lightGrey;
-	padding-bottom: 38px;
+	padding-bottom: 20px;
 	.title {
 		width: 385px;
 		padding-top: 29px;
@@ -234,60 +240,28 @@ p {
 			margin: 0 auto;
 		}
 	}
+	p {
+		margin-bottom: 18px;
+	}
 }
 .line {
 	height: 12px;
 	background: url(../img/grey-line.png) repeat-x;
 }
-.works {
-	padding: 34px 0 0 0;
-	color: $lightGrey;
-	.title {
-		width: 388px;
+#container {
+	.mix {
+		display: none;
 	}
-	#filter {
-		text-align: right;
-		overflow: hidden;
-		margin-top: 6px;
+	overflow: hidden;
+	margin-top: 39px;
 		li {
-			display: inline-block;
-			padding: 6px 14px 8px 14px;
-			&.active {
-				background: $lightGrey;
-				color: #000;
-				border-radius: 6px;
-				a {
-					color: #000;
-					padding-bottom: none;
-					&:hover {
-						border-bottom: none;
-						cursor: default;
-					}
-				}
-			}
-		}
-		a {
-			color: $lightGrey;
-			font-family: "Roboto";
-			font-size: 14px;
-			padding-bottom: 2px;
-			&:hover {
-				border-bottom: 1px dashed $lightGrey;
-			}
-		}
-	}
-	#stage {
-		li {
-			width: 300px;
-			float: left;
-			margin: 0px 20px 20px 0;
+			width: 309px;
+			margin-bottom: 20px;
 			position: relative;
-			&:nth-of-type(3n) {
-				margin-right: 0;
-			}
+			
 			.blank {
 				overflow: hidden;
-				width: 100%;
+				width: 300px;
 				height: 100%;
 				position: absolute;
 				top: 0;
@@ -378,21 +352,158 @@ p {
 	}
 }
 }
+.works {
+	padding: 34px 0 23px 0;
+	color: $lightGrey;
+	.title {
+		width: 388px;
+	}
+	#filter {
+		text-align: right;
+		overflow: hidden;
+		margin-top: 6px;
+		li {
+			cursor: pointer;
+			display: inline-block;
+			padding: 6px 14px 8px 14px;
+			&.active {
+				background: $lightGrey;
+				color: #000;
+				border-radius: 6px;
+				span {
+					color: #000;
+					padding-bottom: none;
+					&:hover {
+						border-bottom: none;
+						cursor: default;
+					}
+				}
+			}
+		}
+		span {
+			color: $lightGrey;
+			font-family: "Roboto";
+			font-size: 14px;
+			padding-bottom: 2px;
+			&:hover {
+				border-bottom: 1px dashed $lightGrey;
+			}
+		}
+	}
 }
 .transition {
 	transition: all .5s ease-in-out 0s;
 }
-#container {
-	margin-top: 39px;
-	ul.hidden{
-		display:none;
+.order {
+	color: $lightGrey;
+	position: relative;
+	background: $darkGrey;
+	padding: 27px 0 48px 0;
+	.title {
+		width: 600px;
+	}
+	.topline {
+		background: url(../img/fone-grey.png) repeat-x;
+		height: 7px;
+		top: -6px;
+	}
+	.bottomline {
+		position: absolute;
+		background: url(../img/fone-red-top.png) repeat-x;
+		height: 17px;
+		bottom: -1px;
+	}
+	span {
+		text-shadow: rgba(255,255,255,0.85) 0 0 3px;
+	}
+}
+#footer {
+	position: relative;
+	background: url(../img/fone-red.png) repeat-x;
+	padding-top: 20px;
+	font-family: "Roboto";
+	font-size: 18px;
+	color: #000;
+	p {
+		font-size: 18px;
+	}
+	.bottom {
+		margin-top: 27px;
+		overflow: hidden;
+		#contacts {
+			float: left;
+			width: 266px;
+			span {
+				display: block;
+				position: relative;
+				padding-left: 33px;
+				line-height: 29px;
+			}
+			i {
+				position: absolute;
+				display: block;
+				left: 0;
+				&.skype {
+					@extend .sprite-skype2;
+					width: 23px;
+					height: 23px;
+				}
+				&.point {
+					@extend .sprite-map;
+					width: 22px;
+					height: 24px;
+				}
+				&.mail {
+					@extend .sprite-mail2;
+					width: 22px;
+					height: 22px;
+				}
+			}
+		}
+		.menu {
+			float: right;
+			margin-right: 36px;
+			a {
+				color: #000;
+				position: relative;
+				padding-left: 8px;
+				&::after {
+					content: "\2022";
+					font-size: 28px;
+					position: absolute;
+					top: 0px;
+					right: -11px;
+				}
+				&:last-of-type {
+					&::after {
+						content: none;
+					}
+				}
+				&:hover {
+					text-shadow: rgba(255, 255, 255, 1) 0px 2px 1px;
+					&::after {
+						text-shadow: none;
+					}
+				}
+			}
+		}
+	}
+	.copyright {
+		position: absolute;
+		right: 0;
+		left: 0;
+		margin: auto;
+		width: 100%;
+		bottom: 15px;
+		text-align: center;
+		p {
+			font-size: 14px;
+		}
 	}
 }
 
-
-
 /******** General styles ends ********/
 /******** Other styles ********/
-@import url(../css/colorbox.css);
+@import url(../css/prettyPhoto.css);
 
 /******** Other styles ends ********/
